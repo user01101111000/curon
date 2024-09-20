@@ -1,0 +1,99 @@
+.converter {
+  width: 37rem;
+
+  background-color: rgba(0, 0, 0, 0.616);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  gap: 3rem;
+}
+
+.error_text {
+  color: red;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+}
+.converter_header {
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.input_box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.converter_form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.converter_form input[type="number"] {
+  background-color: transparent;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding: 1rem;
+  color: white;
+}
+
+.converter_form input[type="number"]::placeholder {
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.submit {
+  color: white;
+  background-color: #f9a826;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.disable_button {
+  opacity: 0.3;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.result {
+  color: #f9a826;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  user-select: none;
+  text-align: center;
+}
+
+@media screen and (max-width: 450px) {
+  .converter {
+    width: 100%;
+  }
+}

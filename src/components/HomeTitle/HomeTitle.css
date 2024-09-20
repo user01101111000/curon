@@ -1,0 +1,52 @@
+.home_title {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.5rem;
+  flex: 0.7;
+}
+.home_title_header {
+  color: white;
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  line-height: 1.3;
+}
+.home_title_about {
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  line-height: 2;
+}
+.home_title_button {
+  color: black;
+  background-color: #f9a826;
+  border: none;
+  padding: 0.8rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+  .home_title {
+    gap: 1rem;
+  }
+  .home_title_header {
+    font-size: 3rem;
+  }
+  .home_title_about {
+    color: white;
+    font-size: 0.8rem;
+  }
+  .home_title_button {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,8 @@
+.home-layout {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)),
+    url("../assets/images/currency_back2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
