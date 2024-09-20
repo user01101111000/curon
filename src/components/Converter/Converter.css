@@ -69,6 +69,13 @@
   cursor: pointer;
   font-family: "Antonio", sans-serif;
   transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+}
+
+.submit:hover {
+  background-color: rgba(0, 0, 0, 0.534);
+  color: #f9a826;
+  border: 1px solid #f9a826;
 }
 
 .disable_button {

@@ -17,14 +17,17 @@ const HomeTitle = () => {
         Its principal aim is to convey 200 million new retail buyers to crypto
         through casting off all fiat limitations at the manner to crypto.
       </p>
-      <a
+      <motion.a
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.9 }}
+        transition={{ type: "spring", stiffness: 400, damping: 10 }}
         className="home_title_button"
         href="https://github.com/user01101111000/curon"
         target="_blank"
       >
         <FaGithub />
         Github
-      </a>
+      </motion.a>
     </motion.article>
   );
 };
