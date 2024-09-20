@@ -1,5 +1,5 @@
 <div align="center">
-<img src ="/src/assets/images/CURONTEXT.png" alt="nextjs" width="30%" title='curon' />
+<img src ="/src/assets/images/CURONTEXT.png" alt="curon" width="30%" title='curon' />
 </div>
 
 </br>
@@ -8,5 +8,5 @@
 
 </br>
 
-<div align="center"><img src ="/src/assets/images/CURON.png" alt="nextjs" width="100%" title='curon' />
+<div align="center"><img src ="/src/assets/images/CURON.png" alt="curon" width="100%" title='curon' />
 </div>
