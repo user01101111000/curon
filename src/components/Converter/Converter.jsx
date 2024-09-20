@@ -6,9 +6,10 @@ import useGetConvertQuery from "../../hooks/api/useGetConvertQuery";
 import "./Converter.css";
 import { useState } from "react";
 import dollar from "../../assets/icons/dollar.png";
+import { motion } from "framer-motion";
 
 const Converter = ({ currencies }) => {
-  const [result, setResult] = useState("0.00");
+  const [result, setResult] = useState("Enter currency");
   const { mutateAsync } = useGetConvertQuery();
 
   const {
@@ -37,11 +38,18 @@ const Converter = ({ currencies }) => {
   }
 
   return (
-    <article className="converter">
+    <motion.article
+      className="converter"
+      initial={{ opacity: 0, x: "50%" }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8, ease: "backOut" }}
+    >
       <figure className="converter_img">
         <img src={dollar} alt="dollar" />
       </figure>
-      <h1 className="converter_header"><span className="brandName">Currency</span> Converter</h1>
+      <h1 className="converter_header">
+        <span className="brandName">Currency</span> Converter
+      </h1>
       <form className="converter_form" onSubmit={handleSubmit}>
         <div className="input_box">
           <input
@@ -86,12 +94,12 @@ const Converter = ({ currencies }) => {
           type="submit"
           className={"submit" + (isSubmitting ? " disable_button" : "")}
         >
-          {isSubmitting ? <Loader /> : "Convert"}
+          {isSubmitting ? <Loader /> : "CONVERT"}
         </button>
       </form>
 
       <h1 className="result">{result}</h1>
-    </article>
+    </motion.article>
   );
 };
 

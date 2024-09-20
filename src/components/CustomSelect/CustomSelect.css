@@ -19,7 +19,7 @@
 
   user-select: none;
 
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid #f9a82667;
 }
 
 .CustomSelect h1 {
@@ -44,6 +44,7 @@
   max-height: 20rem;
   overflow: auto;
 
+  border: 1px solid #f9a82667;
   padding: 1rem;
 }
 .CustomSelect_list li {
