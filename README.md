@@ -1,4 +1,6 @@
-<h1 align="center">CURON</h1>
+<div align="center">
+<img src ="/src/assets/images/CURONTEXT.png" alt="nextjs" width="30%" title='curon' />
+</div>
 
 </br>
 
@@ -6,7 +8,7 @@
 
 </br>
 
-<div align="center"><img src ="/src/assets/images/CURON.png" alt="nextjs" width="100%" title='nextjs' />
+<div align="center"><img src ="/src/assets/images/CURON.png" alt="nextjs" width="100%" title='curon' />
 </div>
 
 </br>
