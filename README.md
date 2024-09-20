@@ -4,7 +4,7 @@
 
 </br>
 
-**_Curon_** is a currency converter with a nice interface, fast working ability and compatible with many devices.
+Exchange rates are updated all the time and you wanted to compare the exchange rate of the country you are going to go on holiday with the exchange rate of your own country, this is normal. Then go ahead and compare without wasting time and enjoy a good holiday.
 
 </br>
 
