@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header className="header">
       <h1 className="logo_text" onClick={() => window.location.reload()}>
-        CURON $
+        CURON
       </h1>
     </header>
   );

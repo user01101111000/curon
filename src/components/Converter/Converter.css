@@ -1,12 +1,14 @@
 .converter {
   width: 37rem;
-
-  background-color: rgba(0, 0, 0, 0.616);
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   align-items: center;
   flex-direction: column;
   padding: 2rem 1.5rem;
   gap: 3rem;
+
+  border: 2px solid #f9a82667;
 }
 
 .error_text {
@@ -19,7 +21,7 @@
   color: white;
   font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 0.2rem;
+  letter-spacing: 2px;
   text-align: center;
   line-height: 1.2;
 }
@@ -71,6 +73,21 @@
 .disable_button {
   opacity: 0.3;
 }
+.converter_img {
+  position: absolute;
+  top: -3.5rem;
+  left: 1rem;
+  height: 6rem;
+  width: auto;
+  transform: rotate(30deg);
+  user-select: none;
+  pointer-events: none;
+}
+
+.converter_img img {
+  height: 100%;
+  width: 100%;
+}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -85,15 +102,25 @@ input[type="number"] {
 
 .result {
   color: #f9a826;
-  font-size: 1.5rem;
+  font-size: 3rem;
+  font-family: "Antonio", sans-serif;
   font-weight: 700;
-  letter-spacing: 0.2rem;
+  letter-spacing: 1px;
   user-select: none;
   text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  .result {
+    font-size: 2.5rem;
+  }
 }
 
 @media screen and (max-width: 450px) {
   .converter {
     width: 100%;
+  }
+  .result {
+    font-size: 2rem;
   }
 }

@@ -5,6 +5,10 @@
   gap: 1.5rem;
   flex: 0.7;
 }
+.brandName {
+  font-style: italic;
+  color: #f9a826;
+}
 .home_title_header {
   color: white;
   font-size: 4rem;

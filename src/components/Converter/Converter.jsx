@@ -5,6 +5,7 @@ import Loader from "../Loader/Loader.jsx";
 import useGetConvertQuery from "../../hooks/api/useGetConvertQuery";
 import "./Converter.css";
 import { useState } from "react";
+import dollar from "../../assets/icons/dollar.png";
 
 const Converter = ({ currencies }) => {
   const [result, setResult] = useState("0.00");
@@ -37,7 +38,10 @@ const Converter = ({ currencies }) => {
 
   return (
     <article className="converter">
-      <h1 className="converter_header">Currency Converter</h1>
+      <figure className="converter_img">
+        <img src={dollar} alt="dollar" />
+      </figure>
+      <h1 className="converter_header"><span className="brandName">Currency</span> Converter</h1>
       <form className="converter_form" onSubmit={handleSubmit}>
         <div className="input_box">
           <input
