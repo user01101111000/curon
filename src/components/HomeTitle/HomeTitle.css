@@ -33,6 +33,24 @@
   gap: 1rem;
 }
 
+@media screen and (max-width: 900px) {
+  .home_title {
+    gap: 1rem;
+    flex: 0;
+    text-align: center;
+    align-items: center;
+  }
+  .home_title_header {
+    text-align: center;
+  }
+  .home_title_about {
+    text-align: center;
+  }
+  .home_title_button {
+    text-align: center;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .home_title {
     gap: 1rem;
