@@ -29,24 +29,24 @@
 
 @media screen and (max-width: 1240px) {
   html {
-    font-size: 13px !important;
+    font-size: 12px !important;
   }
 }
 
 @media screen and (max-width: 1140px) {
   html {
-    font-size: 12px !important;
+    font-size: 11px !important;
   }
 }
 
 @media screen and (max-width: 1040px) {
   html {
-    font-size: 11px !important;
+    font-size: 10px !important;
   }
 }
 
 @media screen and (max-width: 940px) {
   html {
-    font-size: 10px !important;
+    font-size: 9px !important;
   }
 }

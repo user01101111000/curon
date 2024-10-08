@@ -1,39 +1,44 @@
-import CustomSelect from "../CustomSelect/CustomSelect.jsx";
+import "./Converter.css";
 import { useFormik } from "formik";
 import { amountSchema } from "../../utils/schema";
 import Loader from "../Loader/Loader.jsx";
 import useGetConvertQuery from "../../hooks/api/useGetConvertQuery";
-import "./Converter.css";
 import { useState } from "react";
 import dollar from "../../assets/icons/dollar.png";
 import { motion } from "framer-motion";
+import Select from "react-select";
+import customStyle from "../../utils/styleForSelect.js";
 
 const Converter = ({ currencies }) => {
   const [result, setResult] = useState("Enter currency");
   const { mutateAsync } = useGetConvertQuery();
 
+  const options = currencies.map((x) => ({
+    label: x[1],
+    value: x[0],
+  }));
+
   const {
     values,
     handleChange,
     handleSubmit,
-    resetForm,
     isSubmitting,
     errors,
     setFieldValue,
   } = useFormik({
     initialValues: {
       amount: "",
-      baseCurrency: "",
-      finalCurrency: "",
+      baseCurrency: null,
+      finalCurrency: null,
     },
     onSubmit,
     validationSchema: amountSchema,
   });
 
-  function onSubmit(values) {
+  function onSubmit(values, { setSubmitting }) {
     mutateAsync(values).then((data) => {
       setResult(data);
-      resetForm();
+      setSubmitting(false);
     });
   }
 
@@ -63,28 +68,25 @@ const Converter = ({ currencies }) => {
           {errors.amount && <p className="error_text">{errors.amount}</p>}
         </div>
         <div className="input_box">
-          <CustomSelect
-            list={currencies}
-            label="Select currency"
-            keyName="baseCurrency"
-            zIndex={102}
-            selectedValue={values.baseCurrency}
-            onChange={(e, item) => setFieldValue(e, item)}
+          <Select
+            defaultValue={values.baseCurrency}
+            onChange={(e) => setFieldValue("baseCurrency", e)}
+            options={options}
+            styles={customStyle}
+            components={{ IndicatorSeparator: () => null }}
           />
           {errors.baseCurrency && (
             <p className="error_text">{errors.baseCurrency}</p>
           )}
         </div>
         <div className="input_box">
-          <CustomSelect
-            list={currencies}
-            keyName="finalCurrency"
-            label="Select currency"
-            zIndex={100}
-            selectedValue={values.finalCurrency}
-            onChange={(e, item) => setFieldValue(e, item)}
+          <Select
+            defaultValue={values.finalCurrency}
+            onChange={(e) => setFieldValue("finalCurrency", e)}
+            options={options}
+            styles={customStyle}
+            components={{ IndicatorSeparator: () => null }}
           />
-
           {errors.finalCurrency && (
             <p className="error_text">{errors.finalCurrency}</p>
           )}
